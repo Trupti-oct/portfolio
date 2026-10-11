@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- SEO: edit title and description below -->
+<title>Trupti Irakal | Data Science Trainer, Data Analyst &amp; Aspiring Data Scientist</title>
+<meta name="description" content="Portfolio of Trupti Irakal, a data science trainer and data analyst experienced in Python, SQL, machine learning, Power BI and Generative AI. Based in Hyderabad, India.">
+<meta name="author" content="Trupti Irakal">
+<meta property="og:title" content="Trupti Irakal | Data Science Trainer &amp; Data Analyst">
+<meta property="og:description" content="Training, mentoring, analytics and machine learning projects by Trupti Irakal.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ===== COLORS & FONTS: change the theme here ===== */
+:root{
+  --bg:#0a1128; --bg2:#0f1a3a; --card:#111d42; --line:#22305f;
+  --text:#f4f6ff; --muted:#aab3d6;
+  --accent:#8b7cff; --accent2:#4f9bff;
+  --grad:linear-gradient(135deg,#8b7cff,#4f9bff);
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --sans:"Instrument Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.65;font-size:1.0625rem;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{max-width:100%;display:block}
+:focus-visible{outline:3px solid var(--accent2);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1100px,92%);margin-inline:auto}
+section{padding:96px 0}
+section:nth-of-type(even){background:var(--bg2)}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.15;letter-spacing:-.01em}
+h2{font-size:clamp(1.9rem,4vw,2.6rem);margin-bottom:12px}
+.lead{color:var(--muted);max-width:62ch;margin-bottom:44px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.skip{position:absolute;left:-999px;top:8px;background:#fff;color:#000;padding:8px 14px;border-radius:8px;z-index:200}
+.skip:focus{left:8px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:999px;font-weight:600;font-size:1rem;text-decoration:none;border:1px solid transparent;cursor:pointer;font-family:inherit;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--grad);color:#0a1128;box-shadow:0 8px 24px rgba(99,120,255,.28)}
+.btn-ghost{border-color:var(--line);color:var(--text);background:transparent}
+.btn-ghost:hover{background:rgba(139,124,255,.12);border-color:var(--accent)}
+.btn-sm{padding:9px 18px;font-size:.95rem}
+
+/* Navigation */
+header{position:sticky;top:0;z-index:100;background:rgba(10,17,40,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:var(--serif);font-size:1.25rem;font-weight:600;text-decoration:none}
+.nav-links{display:flex;gap:26px;list-style:none}
+.nav-links a{text-decoration:none;color:var(--muted);font-size:.98rem;padding:6px 0;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--text);border-color:var(--accent)}
+.menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--text);border-radius:10px;padding:8px 12px;font-size:1rem;cursor:pointer;font-family:inherit}
+
+/* Hero: the one expressive moment is the large name with a gradient wash */
+.hero{padding:88px 0 96px;background:radial-gradient(900px 500px at 85% -10%,rgba(139,124,255,.22),transparent 60%),radial-gradient(700px 400px at 0% 100%,rgba(79,155,255,.14),transparent 60%)}
+.hero-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(3rem,8vw,5.5rem);margin-bottom:16px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;animation:rise .9s ease both}
+.role{font-size:1.2rem;font-weight:500;margin-bottom:20px}
+.hero p.intro{color:var(--muted);max-width:60ch;margin-bottom:32px}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:28px}
+.social{display:flex;gap:12px;flex-wrap:wrap}
+.social a{padding:7px 16px;border:1px solid var(--line);border-radius:999px;text-decoration:none;color:var(--muted);font-size:.95rem;transition:all .2s}
+.social a:hover{color:var(--text);border-color:var(--accent)}
+.photo{aspect-ratio:4/5;max-width:380px;margin-inline:auto;width:100%;border-radius:28px;border:1px solid var(--line);background:linear-gradient(160deg,rgba(139,124,255,.25),rgba(79,155,255,.08));display:grid;place-items:center;overflow:hidden;position:relative}
+.photo img{width:100%;height:100%;object-fit:cover}
+.photo .ph{text-align:center;color:var(--muted);padding:24px;font-size:.95rem}
+.photo .ph b{display:block;font-family:var(--serif);font-size:4rem;color:var(--text);margin-bottom:8px}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+/* Cards */
+.grid{display:grid;gap:22px}
+.g4{grid-template-columns:repeat(4,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;transition:border-color .2s}
+.card:hover{border-color:var(--accent)}
+.card h3{font-size:1.2rem;margin-bottom:8px}
+.card p{color:var(--muted);font-size:1rem}
+.stat{font-family:var(--serif);font-size:2.4rem;line-height:1;margin-bottom:8px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.about-text{max-width:70ch;color:var(--muted);margin-bottom:40px}
+
+/* Skills */
+.tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.tag{padding:6px 14px;border-radius:999px;background:rgba(139,124,255,.12);border:1px solid rgba(139,124,255,.35);font-size:.93rem}
+
+/* Timeline (experience is a real chronological sequence) */
+.timeline{list-style:none;position:relative;padding-left:30px;border-left:2px solid var(--line);display:grid;gap:30px}
+.timeline li{position:relative}
+.timeline li::before{content:"";position:absolute;left:-39px;top:8px;width:16px;height:16px;border-radius:50%;background:var(--grad);border:3px solid var(--bg)}
+section:nth-of-type(even) .timeline li::before{border-color:var(--bg2)}
+.job h3{font-size:1.35rem}
+.org{color:var(--accent2);font-weight:500}
+.date{color:var(--muted);font-size:.95rem;margin:4px 0 14px}
+.job ul{padding-left:20px;color:var(--muted)}
+.job li{margin-bottom:6px;padding-left:4px}
+
+/* Projects */
+.shot{aspect-ratio:16/9;border-radius:12px;margin-bottom:18px;border:1px dashed var(--accent);background:repeating-linear-gradient(135deg,rgba(139,124,255,.08) 0 14px,rgba(79,155,255,.05) 14px 28px);display:grid;place-items:center;color:var(--muted);font-size:.93rem;text-align:center;padding:12px;overflow:hidden}
+.shot img{width:100%;height:100%;object-fit:cover;border-radius:12px}
+.project h3{font-size:1.4rem}
+.project .tags{margin:16px 0 22px}
+.project .row{display:flex;gap:12px;flex-wrap:wrap}
+.project .card-body{display:flex;flex-direction:column;height:100%}
+.project .row{margin-top:auto}
+.details{display:none;margin-top:18px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:.98rem}
+.details.open{display:block}
+
+/* Teaching */
+.teach .card{display:flex;gap:16px;align-items:flex-start}
+.teach .dot{flex:none;width:12px;height:12px;border-radius:50%;background:var(--grad);margin-top:9px}
+.teach .card p{color:var(--text)}
+
+/* Education */
+.edu .card .yr{color:var(--accent2);font-weight:600;margin-bottom:6px}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:40px}
+.contact-list{list-style:none;display:grid;gap:14px;margin-bottom:24px}
+.contact-list span{display:block;color:var(--muted);font-size:.9rem}
+.contact-list a{text-decoration:none;border-bottom:1px solid var(--accent)}
+form{display:grid;gap:16px}
+label{font-weight:500;font-size:.97rem;display:block;margin-bottom:6px}
+input,textarea{width:100%;padding:13px 15px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--text);font:inherit}
+input:focus,textarea:focus{border-color:var(--accent);outline:none;box-shadow:0 0 0 3px rgba(139,124,255,.3)}
+textarea{min-height:140px;resize:vertical}
+.err{color:#ff9a9a;font-size:.9rem;min-height:1.2em;margin-top:4px}
+.status{padding:12px 16px;border-radius:12px;display:none;font-size:.97rem}
+.status.show{display:block;background:rgba(79,155,255,.12);border:1px solid var(--accent2)}
+
+footer{background:#070d20;border-top:1px solid var(--line);padding:40px 0;text-align:center;color:var(--muted)}
+footer strong{display:block;color:var(--text);font-family:var(--serif);font-size:1.25rem}
+footer .social{justify-content:center;margin:18px 0 14px}
+
+/* Responsive */
+@media(max-width:960px){.g4{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(2,1fr)}.hero-grid{grid-template-columns:1fr}.photo{order:-1;max-width:260px}.contact-grid{grid-template-columns:1fr}}
+@media(max-width:760px){
+  section{padding:70px 0}
+  .menu-btn{display:block}
+  .nav-links{position:absolute;top:68px;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--line);flex-direction:column;gap:0;padding:8px 4%;display:none}
+  .nav-links.open{display:flex}
+  .nav-links a{display:block;padding:14px 0;border:0}
+  .g4,.g3,.g2{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header>
+  <nav class="wrap" aria-label="Main navigation">
+    <a class="logo" href="#home">Trupti Irakal</a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks">Menu</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#teaching">Teaching</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- HERO: edit name, role and introduction text here -->
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Trupti Irakal</h1>
+      <p class="role">Data Science Trainer | Data Analyst | Aspiring Data Scientist</p>
+      <p class="intro">I am a Data Science professional with experience in technical training, data analytics, machine learning, and Generative AI. I specialize in simplifying complex technical concepts, developing practical learning experiences, mentoring students on real-world projects, and transforming data into meaningful insights.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#projects">View My Projects</a>
+        <!-- RESUME: set the file path in CONFIG.resumePath in the script at the bottom -->
+        <a class="btn btn-ghost" id="resumeBtn" href="resume.pdf" download>Download Resume</a>
+      </div>
+      <div class="social">
+        <!-- SOCIAL LINKS: set URLs in CONFIG.linkedin and CONFIG.github in the script at the bottom -->
+        <a href="#" data-social="linkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="#" data-social="github" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+    <!-- PROFILE PHOTO: put your photo file path in CONFIG.photo (e.g. "images/trupti.jpg"). Until then, initials show. -->
+    <div class="photo" id="photoBox" role="img" aria-label="Profile photo of Trupti Irakal">
+      <div class="ph"><b>TI</b>Your photo goes here</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <h2>About me</h2>
+    <p class="about-text">I have experience in data science training and mentoring, with expertise in Python, SQL, statistics, data visualization, machine learning, and AI technologies. My professional experience includes delivering technical training, designing course materials, conducting practical sessions, guiding students through projects, and supporting learners in developing industry-relevant skills.</p>
+    <div class="grid g4">
+      <div class="card"><div class="stat">2+ years</div><h3>Training and mentoring</h3><p>Technical training and mentoring experience.</p></div>
+      <div class="card"><h3>Data Science Training and Mentoring</h3><p>Guiding learners from fundamentals to real-world projects.</p></div>
+      <div class="card"><h3>Data Analytics and Business Intelligence</h3><p>Turning data into dashboards and insights.</p></div>
+      <div class="card"><h3>Machine Learning and Generative AI</h3><p>Building and teaching ML and LLM-based applications.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS: add or remove <span class="tag"> items -->
+<section id="skills">
+  <div class="wrap">
+    <h2>Technical skills</h2>
+    <p class="lead">Tools and techniques I use and teach.</p>
+    <div class="grid g2">
+      <div class="card"><h3>Programming and Databases</h3><div class="tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">MongoDB</span></div></div>
+      <div class="card"><h3>Data Analysis and Visualization</h3><div class="tags"><span class="tag">NumPy</span><span class="tag">Pandas</span><span class="tag">Matplotlib</span><span class="tag">Seaborn</span><span class="tag">Plotly</span><span class="tag">Power BI</span><span class="tag">Tableau</span><span class="tag">Excel</span></div></div>
+      <div class="card"><h3>Machine Learning and AI</h3><div class="tags"><span class="tag">Machine Learning</span><span class="tag">Deep Learning</span><span class="tag">Statistical Analysis</span><span class="tag">Natural Language Processing (NLP)</span><span class="tag">Optical Character Recognition (OCR)</span><span class="tag">Large Language Models (LLMs)</span><span class="tag">Generative AI</span><span class="tag">Scikit-learn</span><span class="tag">TensorFlow</span></div></div>
+      <div class="card"><h3>Development and Cloud</h3><div class="tags"><span class="tag">Streamlit</span><span class="tag">AWS</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE: newest first -->
+<section id="experience">
+  <div class="wrap">
+    <h2>Work experience</h2>
+    <p class="lead">Training and mentoring roles, newest first.</p>
+    <ol class="timeline">
+      <li class="job">
+        <h3>Data Science Facilitator</h3>
+        <div class="org">Teks Academy, Kapil Knowledge Hub</div>
+        <div class="date">June 2026 – Present</div>
+        <ul>
+          <li>Delivering training on Python, SQL, Statistics, Data Analytics, and Machine Learning.</li>
+          <li>Conducting hands-on sessions on exploratory data analysis, data preprocessing, feature engineering, and model building.</li>
+          <li>Mentoring students on real-world data science projects and interview preparation.</li>
+          <li>Teaching SQL joins, subqueries, window functions, CTEs, and stored procedures.</li>
+          <li>Developing course materials, assignments, and assessments.</li>
+          <li>Guiding students in resume building, Git/GitHub, and data science workflows.</li>
+        </ul>
+      </li>
+      <li class="job">
+        <h3>Junior Data Science Mentor</h3>
+        <div class="org">Data Mites</div>
+        <div class="date">August 2025 – June 2026</div>
+        <ul>
+          <li>Training students in Data Analytics, Data Science, AI/ML, Statistics, Python, DSA, Git, and AWS deployment.</li>
+          <li>Guiding hands-on projects using real-world datasets, machine learning models, and business intelligence tools.</li>
+          <li>Evaluating machine learning models, feature engineering, dashboards, and data storytelling.</li>
+          <li>Conducting sessions on Python, SQL, Power BI, Tableau, and Excel.</li>
+          <li>Mentoring students in project development, deployment, and version control.</li>
+        </ul>
+      </li>
+      <li class="job">
+        <h3>Data Science Trainer</h3>
+        <div class="org">MTD</div>
+        <div class="date">February 2025 – June 2025</div>
+        <ul>
+          <li>Delivering training on Python, Data Analysis, SQL, and basic Machine Learning.</li>
+          <li>Working with real-world datasets for data cleaning, EDA, and visualization.</li>
+          <li>Guiding learners through practical machine learning implementations and mini-projects.</li>
+          <li>Supporting practical understanding of AI/ML workflows and use cases.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- PROJECTS: replace screenshots via CONFIG.projects[n].image and links via .github / .details -->
+<section id="projects">
+  <div class="wrap">
+    <h2>Featured projects</h2>
+    <p class="lead">Selected work in applied AI and business intelligence.</p>
+    <div class="grid g2">
+      <article class="card project">
+        <div class="card-body">
+          <div class="shot" id="shot0">Project screenshot placeholder<br>(replace with a real screenshot)</div>
+          <h3>LLM Application to Interact with Database</h3>
+          <p>Built an end-to-end LLM application using NLP for natural language understanding and SQL query generation. Developed with Python, Streamlit, and SQL, the application allows users to interact with structured databases through natural language using a user-friendly interface.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">NLP</span><span class="tag">LLMs</span><span class="tag">Streamlit</span><span class="tag">SQL</span></div>
+          <div class="row">
+            <a class="btn btn-ghost btn-sm" href="#" data-project="0" data-kind="github" target="_blank" rel="noopener noreferrer">GitHub repository</a>
+            <button class="btn btn-primary btn-sm" type="button" data-toggle="d0" aria-expanded="false">Project details</button>
+          </div>
+          <div class="details" id="d0">Natural language questions are converted into SQL queries and run against a structured database, with results shown in a Streamlit interface. Add a link to a write-up or demo in CONFIG.projects[0].details.</div>
+        </div>
+      </article>
+      <article class="card project">
+        <div class="card-body">
+          <div class="shot" id="shot1">Project screenshot placeholder<br>(replace with a real screenshot)</div>
+          <h3>Netflix Content Analytics Dashboard Using Power BI</h3>
+          <p>Analyzed the Netflix Movies and TV Shows dataset to explore content distribution, genre trends, country-wise production insights, and release patterns. Designed interactive Power BI dashboards to visualize total titles, genre popularity, release-year trends, ratings distribution, and country-wise content production. Applied data cleaning, transformation, and DAX calculations to derive meaningful insights.</p>
+          <div class="tags"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Data Cleaning</span><span class="tag">Data Transformation</span><span class="tag">Data Visualization</span></div>
+          <div class="row">
+            <a class="btn btn-ghost btn-sm" href="#" data-project="1" data-kind="github" target="_blank" rel="noopener noreferrer">GitHub repository</a>
+            <button class="btn btn-primary btn-sm" type="button" data-toggle="d1" aria-expanded="false">Project details</button>
+          </div>
+          <div class="details" id="d1">Dashboards cover total titles, genre popularity, release-year trends, ratings distribution, and country-wise production. Add a link to the dashboard file or a write-up in CONFIG.projects[1].details.</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- TEACHING -->
+<section id="teaching" class="teach">
+  <div class="wrap">
+    <h2>Teaching and mentoring</h2>
+    <p class="lead">How I help learners build practical, job-ready data skills.</p>
+    <div class="grid g3">
+      <div class="card"><span class="dot"></span><p>Technical training and student mentoring</p></div>
+      <div class="card"><span class="dot"></span><p>Curriculum and learning material development</p></div>
+      <div class="card"><span class="dot"></span><p>Practical assignments and assessments</p></div>
+      <div class="card"><span class="dot"></span><p>Real-world project guidance</p></div>
+      <div class="card"><span class="dot"></span><p>Interview preparation</p></div>
+      <div class="card"><span class="dot"></span><p>Resume and Git/GitHub guidance</p></div>
+      <div class="card"><span class="dot"></span><p>Data science workflow implementation</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="edu">
+  <div class="wrap">
+    <h2>Education and certifications</h2>
+    <p class="lead">Academic background and certifications.</p>
+    <div class="grid g2">
+      <div class="card"><div class="yr">2024</div><h3>Data Science Training Certificate</h3><p>Apponix Training Institute, Hubballi</p></div>
+      <div class="card"><div class="yr">August 2023</div><h3>Employability Certification</h3><p>Nandi Foundation, Mahindra, Vijayapura</p></div>
+      <div class="card"><div class="yr">2023</div><h3>Bachelor of Computer Applications (BCA)</h3><p>SMT. Kumudben Darbar BCA College, Vijayapura</p></div>
+      <div class="card"><div class="yr">2018</div><h3>Higher Secondary Certificate (HSC)</h3><p>BDES's Girl Pre-University College, Vijayapura</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <p class="lead">Open to training opportunities and professional conversations.</p>
+    <div class="contact-grid">
+      <div>
+        <ul class="contact-list">
+          <li><span>Name</span>Trupti Irakal</li>
+          <li><span>Email</span><a href="mailto:irkaltrupti2002@gmail.com">irkaltrupti2002@gmail.com</a></li>
+          <li><span>Phone</span><a href="tel:+919108463529">+91-9108463529</a></li>
+          <li><span>Location</span>Hyderabad, India</li>
+        </ul>
+        <div class="social">
+          <a href="#" data-social="linkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="#" data-social="github" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+      <!--
+        CONTACT FORM: This form currently validates input in the browser only. It does NOT send messages.
+        To connect it later, use a form service such as Formspree, Web3Forms or EmailJS:
+        1) Create a form on the service and copy its endpoint URL.
+        2) Paste it into CONFIG.formEndpoint in the script below.
+        The script will then POST the form data to that endpoint. Until then, it shows a notice instead of claiming the message was sent.
+      -->
+      <form id="contactForm" novalidate aria-label="Contact form">
+        <div><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" required><div class="err" id="nameErr" role="alert"></div></div>
+        <div><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required><div class="err" id="emailErr" role="alert"></div></div>
+        <div><label for="message">Message</label><textarea id="message" name="message" required></textarea><div class="err" id="messageErr" role="alert"></div></div>
+        <button class="btn btn-primary" type="submit">Send message</button>
+        <div class="status" id="formStatus" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <strong>Trupti Irakal</strong>
+    Data Science Trainer | Data Analyst | Aspiring Data Scientist
+    <div class="social">
+      <a href="#" data-social="linkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="#" data-social="github" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </div>
+    <small>&copy; <span id="year"></span> Trupti Irakal</small>
+  </div>
+</footer>
+
+<script>
+/* ===== CONFIG: replace the values below. Leave "" to keep a placeholder. ===== */
+const CONFIG = {
+  linkedin: "",              // e.g. "https://www.linkedin.com/in/your-profile"
+  github: "",                // e.g. "https://github.com/your-username"
+  resumePath: "resume.pdf",  // path to your resume file, placed next to index.html
+  photo: "trimage.jpeg",     // profile photo, placed next to index.html
+  formEndpoint: "",          // form service URL (see comment above the contact form)
+  projects: [
+    { github: "", details: "", image: "" },  // Project 1: LLM database app (image e.g. "images/llm-app.png")
+    { github: "", details: "", image: "" }   // Project 2: Netflix Power BI dashboard
+  ]
+};
+
+const PLACEHOLDER_MSG = "This link is a placeholder. Add the real URL in CONFIG at the bottom of index.html.";
+
+/* Social links */
+document.querySelectorAll("[data-social]").forEach(a => {
+  const url = CONFIG[a.dataset.social];
+  if (url) { a.href = url; }
+  else { a.addEventListener("click", e => { e.preventDefault(); alert(PLACEHOLDER_MSG); }); a.title = "Placeholder: add URL in CONFIG"; }
+});
+
+/* Resume */
+const resumeBtn = document.getElementById("resumeBtn");
+resumeBtn.href = CONFIG.resumePath;
+
+/* Profile photo */
+if (CONFIG.photo) {
+  const box = document.getElementById("photoBox");
+  box.innerHTML = '<img src="' + CONFIG.photo + '" alt="Trupti Irakal">';
+}
+
+/* Projects: links, screenshots, details */
+CONFIG.projects.forEach((p, i) => {
+  const gh = document.querySelector('[data-project="' + i + '"]');
+  if (p.github) gh.href = p.github;
+  else gh.addEventListener("click", e => { e.preventDefault(); alert(PLACEHOLDER_MSG); });
+  if (p.image) document.getElementById("shot" + i).innerHTML = '<img src="' + p.image + '" alt="Screenshot of project ' + (i + 1) + '">';
+});
+document.querySelectorAll("[data-toggle]").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const panel = document.getElementById(btn.dataset.toggle);
+    const open = panel.classList.toggle("open");
+    btn.setAttribute("aria-expanded", open);
+    btn.textContent = open ? "Hide details" : "Project details";
+  });
+});
+
+/* Mobile menu */
+const menuBtn = document.getElementById("menuBtn"), navLinks = document.getElementById("navLinks");
+menuBtn.addEventListener("click", () => {
+  const open = navLinks.classList.toggle("open");
+  menuBtn.setAttribute("aria-expanded", open);
+});
+navLinks.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
+  navLinks.classList.remove("open"); menuBtn.setAttribute("aria-expanded", "false");
+}));
+
+/* Highlight the current section in the nav */
+const links = [...navLinks.querySelectorAll("a")];
+const io = new IntersectionObserver(entries => {
+  entries.forEach(en => {
+    if (en.isIntersecting) links.forEach(l => l.classList.toggle("active", l.getAttribute("href") === "#" + en.target.id));
+  });
+}, { rootMargin: "-45% 0px -50% 0px" });
+document.querySelectorAll("main section").forEach(s => io.observe(s));
+
+/* Contact form validation */
+const form = document.getElementById("contactForm"), statusBox = document.getElementById("formStatus");
+function setErr(id, msg) { document.getElementById(id).textContent = msg; return !msg; }
+form.addEventListener("submit", async e => {
+  e.preventDefault();
+  const name = form.name.value.trim(), email = form.email.value.trim(), message = form.message.value.trim();
+  let ok = true;
+  ok = setErr("nameErr", name ? "" : "Enter your name.") && ok;
+  ok = setErr("emailErr", /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ? "" : "Enter a valid email address.") && ok;
+  ok = setErr("messageErr", message.length >= 10 ? "" : "Enter a message of at least 10 characters.") && ok;
+  if (!ok) return;
+  statusBox.classList.add("show");
+  if (!CONFIG.formEndpoint) {
+    statusBox.textContent = "Your details look valid, but this form is not connected to an email service yet. Please email irkaltrupti2002@gmail.com directly.";
+    return;
+  }
+  try {
+    const res = await fetch(CONFIG.formEndpoint, { method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" }, body: JSON.stringify({ name, email, message }) });
+    if (!res.ok) throw new Error("Request failed");
+    statusBox.textContent = "Message sent. Thank you for reaching out.";
+    form.reset();
+  } catch (err) {
+    statusBox.textContent = "The message could not be sent. Please email irkaltrupti2002@gmail.com directly.";
+  }
+});
+
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
